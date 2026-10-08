@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="#1F1D2B"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgPoster"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/naja_movies"
+        android:src="@drawable/movie_1"
+        android:scaleType="centerCrop"
+        app:shapeAppearance="@style/RoundedImg"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvRatingLabel"
+        android:layout_width="52dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rating_shape"
+        android:drawablePadding="5dp"
+        android:text="@string/_4_5"
+        android:textColor="#ED8A19"
+
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/star"
+        android:paddingBottom="3dp"
+        android:paddingStart="5dp"
+        app:layout_constraintStart_toStartOf="@id/imgPoster"
+        app:layout_constraintTop_toTopOf="@id/imgPoster" />
+
+    <TextView
+        android:id="@+id/tvPlanLabel"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/plan_shape"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+
+        android:text="@string/premium"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/imgPoster"
+        app:layout_constraintTop_toTopOf="@id/imgPoster" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:text="@string/naja"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+
+        app:layout_constraintTop_toBottomOf="@id/tvPlanLabel"
+        app:layout_constraintStart_toEndOf="@id/imgPoster"
+        />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2026"
+        android:paddingStart="15dp"
+        android:textColor="@color/gray"
+        android:layout_marginTop="8dp"
+
+        app:drawableStartCompat="@drawable/date_input"
+        android:drawablePadding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toEndOf="@id/imgPoster"
+        />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_148_miniutes"
+        android:paddingStart="15dp"
+        android:textColor="@color/gray"
+        android:layout_marginTop="8dp"
+
+        app:drawableStartCompat="@drawable/time"
+        android:drawablePadding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDate"
+        app:layout_constraintStart_toEndOf="@id/imgPoster"
+        />
+
+    <TextView
+        android:id="@+id/tvGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action"
+        android:paddingStart="15dp"
+        android:textColor="@color/gray"
+        android:layout_marginTop="8dp"
+
+        app:drawableStartCompat="@drawable/film"
+        android:drawablePadding="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTime"
+        app:layout_constraintStart_toEndOf="@id/imgPoster"
+        />
+
+    <TextView
+        android:id="@+id/tvPG"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="PG-13"
+        android:textSize="12sp"
+
+        android:textColor="@color/cyan"
+        android:background="@drawable/pg_strok"
+        android:layout_marginStart="10dp"
+
+        app:layout_constraintTop_toTopOf="@id/tvTime"
+        app:layout_constraintStart_toEndOf="@id/tvTime"
+        />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/movie"
+        android:textColor="@color/white"
+        android:layout_marginStart="3dp"
+
+        app:layout_constraintTop_toTopOf="@id/tvGenre"
+        app:layout_constraintStart_toEndOf="@id/tvGenre"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

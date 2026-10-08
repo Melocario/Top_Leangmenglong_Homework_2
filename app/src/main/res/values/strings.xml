@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MoviesApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="naja_movies">Naja Movies</string>
+    <string name="_4_5">4.5</string>
+    <string name="naja">Naja</string>
+    <string name="premium">Premium</string>
+    <string name="_2026">2026</string>
+    <string name="_148_miniutes">148 Miniutes</string>
+    <string name="action">Action  |</string>
+    <string name="movie">Movie</string>
+</resources>
