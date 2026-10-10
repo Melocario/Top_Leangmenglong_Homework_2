@@ -1,5 +1,7 @@
 package com.example.moviesapp.adapters;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.moviesapp.R;
@@ -62,10 +65,19 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         public void setData(MovieModel item){
             imgPoster.setImageResource(item.getPosterResId());
             tvRatingLabel.setText(String.valueOf(item.getRating()));
-            tvPlanLabel.setText(item.getPlanType() == MovieModel.PlanType.FREE ? "Free" : "Premium");
+
+            // Check type of plan.
+            if (item.getPlanType() == MovieModel.PlanType.FREE) {
+                tvPlanLabel.setText("Free");
+                tvPlanLabel.setBackgroundTintList(ContextCompat.getColorStateList(itemView.getContext(), R.color.cyan));
+            } else {
+                tvPlanLabel.setText("Premium");
+                tvPlanLabel.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#ED8A19")));
+            }
+
             tvName.setText(item.getTitle());
             tvDate.setText(String.valueOf(item.getReleaseYear()));
-            tvTime.setText(String.valueOf(item.getRuntimeMinutes()));
+            tvTime.setText(String.valueOf(item.getRuntimeMinutes() + " Minutes"));
             tvGenre.setText(item.getGenre());
             tvPG.setText(item.getContentRating());
             tvType.setText(" |  Movie");

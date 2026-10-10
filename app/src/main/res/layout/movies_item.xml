@@ -39,16 +39,16 @@
 
     <TextView
         android:id="@+id/tvPlanLabel"
-        android:layout_width="90dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="13dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/plan_shape"
-        android:paddingStart="15dp"
         android:textColor="@color/white"
-
         android:text="@string/premium"
         android:textSize="15sp"
+        android:textAlignment="center"
+
         app:layout_constraintStart_toEndOf="@id/imgPoster"
         app:layout_constraintTop_toTopOf="@id/imgPoster" />
 
